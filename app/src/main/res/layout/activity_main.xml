@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".activity.MainActivity">
+
+    <TextView
+        android:id="@+id/myNotesTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/my_notes"
+        android:textColor="@color/colorWhite"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:paddingStart="15dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        tools:ignore="RtlSymmetry" />
+
+    <LinearLayout
+        android:id="@+id/searchLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_bg"
+        android:layout_below="@id/myNotesTextView"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_search"
+            android:padding="8dp"/>
+
+        <EditText
+            android:id="@+id/searchNotesEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/search_notes"
+            android:textSize="16sp"
+            android:background="@null"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/textHintColor"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:inputType="text"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/allNotesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_below="@+id/searchLinearLayout"
+        android:layout_above="@+id/quickActionLinearLayout"/>
+
+    <LinearLayout
+        android:id="@+id/quickActionLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/quickSearchActions"
+        android:orientation="horizontal"
+        android:paddingStart="10dp">
+
+        <ImageView
+            android:id="@+id/quickAddNoteImageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_add"
+            android:padding="8dp"/>
+
+        <ImageView
+            android:id="@+id/quickAddPictureImageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_image"
+            android:padding="8dp"/>
+
+        <ImageView
+            android:id="@+id/quickAddWebLinkImageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_web"
+            android:padding="8dp"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/addNoteMainButtton"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_above="@id/quickActionLinearLayout"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="-28dp"
+        android:background="@drawable/add_note_bakground"
+        android:src="@drawable/ic_plus"
+        android:padding="12dp"
+        android:layout_alignParentEnd="true"/>
+
+</RelativeLayout>
