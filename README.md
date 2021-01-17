@@ -1,6 +1,6 @@
 # NotesApplication
 
-Note taking application where you can save your notes in text format, images and web url.
+Note taking application where you can save your notes in text format, images and web urls.
 This application uses Room local database to save your notes.
 
 <p float="left">
